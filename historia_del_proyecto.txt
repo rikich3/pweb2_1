@@ -1,1 +1,19 @@
-Empezamos el proyecto con un primer commit que contenia una prueba con una implmentacion de google app script
+Empezamos el proyecto con un primer commit que contenia una prueba con una implmentacion de google app script.
+
+(01/05) Definimos la aplicacion que vamos a realizar.
+
+Un programa que te permite vincularte a un calendario de google calendar y llenaro con eventos fijos y dínamicos a travez de una página web.
+El objetivo del programa es agilizar el tiempo que tarda en crear eventos asi como tambien facilitar la creacion de planes para realizar actividades dinámicas como son un plan de estudio semestral, deportivo, entre otros.
+La pagina web contendra un form que presentara rubros necesarios y opcionales dependiendo del tipo de evento a colocar, presentara rubros necesarios y opcionales
+
+En general todos los eventos necesitaran un nombre y descripcion.
+
+    - Para un evento Fijo se necesitara hora de inicio y (Hora de Termino o Duracion), frecuencia o rangos.
+
+	- Para los Dinámicos debe haber una cantidad de tiempo y un rango de tiempo, opcionalmente un tipo de evento y prioridad (Para la insercion de eventos inteligente).
+	
+Luego dibujamos un boceto sobre como quedaria la pagina:
+
+----
+
+Descripcion Tecnica
