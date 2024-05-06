@@ -69,19 +69,16 @@ box-shadow: 1px 2px 5px rgba(0,0,0,.31);
 border: solid 1px #cbc9c9;
 }
 .intructionbox {
-  padding:10px ;
-  margin-right : 40%;
-  margin-top: 10px;
-  width: 500px; 
-  height: 180px; 
-  -webkit-border-radius: 8px/7px; 
-  -moz-border-radius: 8px/7px; 
-  border-radius: 8px/7px; 
+  display: inline-block; 
+  margin-right: 20px; 
+  margin-top: 20px;
+  padding: 6px,6x;
+  width: 400px; 
+  height: 200px; 
+  border-radius: 8px; 
   background-color: #FEF0E7; 
--webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
--moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-border: solid 1px #cbc9c9;
+  box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  border: solid 1px #cbc9c9;
 }
 
 input[type=radio] {
@@ -149,19 +146,18 @@ box-shadow: none;
 
 }
 .tiempo {
-  display: flex; /* Establece un contenedor flexible */
-  align-items: center; /* Centra los elementos verticalmente */
+  display: flex; 
+  align-items: center; 
 }
 
 .tiempo label {
-  margin-left: 10px; /* Añade un margen a la derecha para separar las etiquetas */
+  margin-left: 10px; 
 }
 .tiempo input[type="number"] {
-  width: 30px; /* Define el ancho deseado del recuadro */
-  height: 20px; /* Define la altura deseada del recuadro */
-  display: flex;
+  width: 30px; 
+  height: 20px; 
   justify-content:right;
-  align-items:flex-start; /* Centrar verticalmente */
+  align-items:flex-start;
   margin-left: 10px;
   
 }
