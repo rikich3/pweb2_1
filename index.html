@@ -38,33 +38,58 @@
           <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
         </div>
         
-        <div class="form-field">
-          <label for="startDate">Start Date:</label>
-          <input type="datetime-local" id="startDate" name="startDate" required><br>
-        </div>
-        <div class="form-field">
-          <label for="endDate">End Date:</label>
-          <input type="datetime-local" id="endDate" name="endDate" required><br>
-        </div>
-        
-
+       
    
         <!--Preguntas estaticas-->
         <div id="estatico" class="hidden">
-          <label for="titleEstatico">Title:</label>
-          <input type="text" id="titleEstatico" name="titleEstatico" required><br>
-          <label for="descriptionEstatico">Description:</label>
-          <textarea id="descriptionEstatico" name="descriptionEstatico" rows="4" cols="50"></textarea><br>
+          <div class="form-field">
+            <label for="startDate">Start Date:</label>
+            <input type="datetime-local" id="startDate" name="startDate" required><br>
+          </div>
+          <div class="form-field">
+            <label for="endDate">End Date:</label>
+            <input type="datetime-local" id="endDate" name="endDate" required><br>
+          </div>  
         </div>
         
         <!--Preguntas dinámicas-->
         <div id="dinamico" class="hidden">
-          <label for="titleDinamico">Title:</label>
-          <input type="text" id="titleDinamico" name="titleDinamico" required><br>
-          <label for="descriptionDinamico">Description:</label>
-          <textarea id="descriptionDinamico" name="descriptionDinamico" rows="4" cols="50"></textarea><br>
-          <label for="startDateDinamico">Start Date:</label>
-          <input type="datetime-local" id="startDateDinamico" name="startDateDinamico" required><br>
+          <div class="form-field">
+            <label for="titleDinamico">Categoria:</label>
+            
+            <label for="opcion1">
+              <input type="radio" id="opcion1" name="seleccion" value="0"> Tiempo de estudio
+            </label><br>
+            <label for="opcion2">
+              <input type="radio" id="opcion2" name="seleccion" value="1"> Entrenamiento físico
+            </label><br>
+            <label for="opcion3">
+              <input type="radio" id="opcion3" name="seleccion" value="2"> Tiempo de trabajo
+            </label><br>
+            <label for="opcion4">
+              <input type="radio" id="opcion4" name="seleccion" value="3"> Hobby
+            </label><br>
+            <label for="opcion5">
+              <input type="radio" id="opcion5" name="seleccion" value="4"> Actividad social
+            </label><br>
+            <label for="opcion6">
+              <input type="radio" id="opcion6" name="seleccion" value="5"> Otro
+            </label><br><br>
+          </div> 
+          <div class="form-field">
+            <label for="numeroDeHoras">Número de horas:</label>
+            <input type="number" id="horas" name="horas" required><br>
+          </div> 
+          <div class="form-field">
+        
+            <label for="años">Años:</label>
+            <input type="number" id="años" name="años" required>
+            <label for="meses">Meses:</label>
+            <input type="number" id="meses" name="meses"required>
+            <label for="días">Días:</label>
+            <input type="number" id="días" name="días" required>
+          </div>
+          
         </div>
         
         <!-- Botón de envío -->
