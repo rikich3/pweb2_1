@@ -1,120 +1,109 @@
-
-    
 <!DOCTYPE html>
 <html lang="es">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    
+    <script src="https://use.fontawesome.com/6a4ab084c1.js"></script>
+    <link rel="stylesheet"  type="text/css" href="style.css">
+  <title>Calendario</title>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-<link rel="stylesheet"  type="text/css" href="style.css">
-<title>Calendar Event Creator</title>
-
-<head>
-  
   <nav>
-    <h1>Calendar Event Creator</h1>
-   
+    <h1 style="color: white;">Kalendorian</h1>
   </nav>
 </head>
 <body>
-  <div class="contenedor">
-    
-    <div class="form-contenedor">
-      <h2>Create Event</h2>
-      <form id="eventForm" action="submit_page.html" method="POST" > <!-- Replace "submit_page.html" with the actual URL where you want to submit the form data -->
-        <!-- Botones para cambiar las preguntas -->
-        <button type="button" onclick="preguntasEstaticas()">Fijo</button>
-        <button type="button" onclick="preguntasDinamicas()">Dinámico</button><br><br>
-        <!--Preguntas Generales-->
-        <div class="form-field">
-          <label for="title">Title:</label>
-          <input type="text" id="title" name="title" required><br>
-        </div>
-        
-        <div class="form-field">
-          <label for="description">Description:</label>
-          <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
-        </div>
-        
-       
+
+  
+  <div class="testbox">
+    <h1>Crea un Evento</h1>
+  
+    <form action="/">
+      <hr>
+        <div id="eventForm" action="submit_page.html" method="POST" >
+          <button type="button" class="boton" onclick="preguntasEstaticas()">Fijo</button>
+          <button type="button" class="boton" onclick="preguntasDinamicas()">Dinámico</button>
    
-        <!--Preguntas estaticas-->
-        <div id="estatico" class="hidden">
-          <div class="form-field">
-            <label for="startDate">Start Date:</label>
-            <input type="datetime-local" id="startDate" name="startDate" required><br>
-          </div>
-          <div class="form-field">
-            <label for="endDate">End Date:</label>
-            <input type="datetime-local" id="endDate" name="endDate" required><br>
-          </div>  
         </div>
-        
-        <!--Preguntas dinámicas-->
-        <div id="dinamico" class="hidden">
-          <div class="form-field">
-            <label for="titleDinamico">Categoria:</label>
-            
-            <label for="opcion1">
-              <input type="radio" id="opcion1" name="seleccion" value="0"> Tiempo de estudio
-            </label><br>
-            <label for="opcion2">
-              <input type="radio" id="opcion2" name="seleccion" value="1"> Entrenamiento físico
-            </label><br>
-            <label for="opcion3">
-              <input type="radio" id="opcion3" name="seleccion" value="2"> Tiempo de trabajo
-            </label><br>
-            <label for="opcion4">
-              <input type="radio" id="opcion4" name="seleccion" value="3"> Hobby
-            </label><br>
-            <label for="opcion5">
-              <input type="radio" id="opcion5" name="seleccion" value="4"> Actividad social
-            </label><br>
-            <label for="opcion6">
-              <input type="radio" id="opcion6" name="seleccion" value="5"> Otro
-            </label><br><br>
-          </div> 
-          <div class="form-field">
+      <hr>
+      <!--Preguntas Generales-->
+    
+        <label id="icon" for="name"><i class="icon-envelope "></i></label>
+        <input type="text" name="" id="title" placeholder="Titulo del evento" required/><br><br>
+      
+      <div class="form-field">
+        <label id="icon" for="name"><i class="icon-envelope "></i></label>
+        <label for="description">Description:</label>
+        <textarea s id="description" name="description" rows="2" cols="37"></textarea><br>
+      </div>
+       <!--Preguntas Fijo-->
+      <div id="estatico" class="hidden">
+        <div class="form-field">
+          <br>
+          <label for="startDate">Fecha de inicio:</label>
+          <input type="datetime-local" id="startDate" name="startDate" required><br>
+        </div>
+        <div class="form-field">
+          <br>
+          <label for="endDate">Fecha de fin:</label>
+          <input type="datetime-local" id="endDate" name="endDate" required><br>
+        </div>  
+
+        <button style="margin-left: 35%;"  type="button" class="boton" onclick="addStaticEvent()">Crear Evento</button>
+      </div>
+      <!--Preguntas dinámicas-->
+      <div id="dinamico" class="hidden">
+          <br>
+          <label id="icon" for="name"><i class="icon-envelope "></i></label>
+          <label for="categoria">Categoria:</label>
+          <select id="dropboxOptions" name="dropboxOptions">
+            <option value="0">Tiempo de estudio</option>
+            <option value="1">Entrenamiento Físico</option>
+            <option value="2">Tiempo de Trabajo</option>
+            <option value="3">Hobby</option>
+            <option value="4">Otro</option>
+          </select> 
+          
+          <div class="tiempo">
+            <br><br>
+            <label id="icon" for="name"><i class="icon-envelope "></i></label>
             <label for="numeroDeHoras">Número de horas:</label>
-            <input type="number" id="horas" name="horas" required><br>
-          </div> 
-          <div class="form-field">
-        
-            <label for="años">Años:</label>
+            <input type="number" id="horas" name="horas" required>
+          </div>
+          
+          <label id="icon" for="name"><i class="icon-envelope "></i></label>
+          <label for="tiempo">Rango de Tiempo:</label>
+          
+          <div class="form-field tiempo">  
+            <br> <br>
+            <label style="margin-left: 7px;" for="años">Años:</label>
             <input type="number" id="años" name="años" required>
             <label for="meses">Meses:</label>
             <input type="number" id="meses" name="meses"required>
             <label for="días">Días:</label>
             <input type="number" id="días" name="días" required>
           </div>
-          
-        </div>
-        
-        <!-- Botón de envío -->
-        <button type="button" onclick="addEvent()">Add Event</button>
-      </form>
-    </div>
 
+          <button style="margin-left: 35%;"  type="button" class="boton" onclick="addDinamicEvent()">Crear Evento</button>
+       
+      </div>
+      </form>
   </div>
-  <div class="settings">
-    <div class="toggle">
-      <!-- Aquí irían tus interruptores -->
-      <p>holaaa</p>
-    </div>
-    <div class="slider">
-      <!-- Aquí irían tus controles deslizantes -->
-      <p>hola</p>
-    </div>
-  </div>
+  
+
+  <div class="intructionbox">
+    <h3>Instrucciones</h3><br>
+    <div class="instrucciones">
+      <p>Sigue las siguientes instrucciones:</p>
+        <p>Eventos fijos: Se refiere a eventos que ya tienen hora y fecha exacta determinada</p>
+        <p>Eventos Dinámicos: Para aquellos planes  que desean realizar y no tienen alguna fecha en especifico</p>
+        <p>Como tal Kalendorian decide por ti deacuerdo a las horas mas efectivas para realizar esa actividad
+        </div>
+      </div></p>
   <div>
-    <h3>Instrucciones</h3>
-    <p>Sigue las siguientes instrucciones</p>
+    
   </div>
-  <div>
-    <!-- En esta parte ira el calendario previsualizado-->
-  </div>
+ 
   <div class="bot">
       <!--En esta parte se usara el boton para activar los mensajes-->
   </div>
